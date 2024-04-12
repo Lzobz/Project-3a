@@ -1,0 +1,14 @@
+version: '3.8'
+services: 
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      container_name: flask-3A
+      ports:
+        -"5000:5000"
+      volumes: 
+        - .:/app
+      enviroment:
+        FLASK_DEBUG: 1
+        
